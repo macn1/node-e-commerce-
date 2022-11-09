@@ -11,7 +11,7 @@ router.post('/submit',(req,res)=>{
   console.log(req.body);
   
   MongoClient.connect("mongodb://localhost:27017",function(err,client){
-
+//connecting to database
   // if (err) 
   //   console.log("error");
   //   else
@@ -24,10 +24,9 @@ if (err) {
   
 } else {
 
-  client.db('hahaaaj').collection('user').insertOne(req.body)
+  client.db('sam').collection('user').insertOne(req.body)
   
 }
-
 
   })
 
